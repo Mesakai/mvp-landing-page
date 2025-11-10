@@ -1,0 +1,23 @@
+<svg width="1200" height="700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="arcGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFA63C;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FA5336;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#F00C50;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="strokeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CFCFD2;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#CFCFD2;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Main fill shape without border -->
+  <path d="M 0 0 L 1200 0 L 1200 400 Q 600 700 0 400 Z"
+        fill="url(#arcGradient)"
+        opacity="0.8"
+        stroke="none"/>
+  <!-- Curved bottom border with gradient opacity -->
+  <path d="M 1200 400 Q 600 700 0 400"
+        fill="none"
+        stroke="url(#strokeGradient)"
+        stroke-width="10"/>
+</svg>
