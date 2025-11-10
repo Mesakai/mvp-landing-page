@@ -1,56 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
 import landingHeroAsset from '../assets/LandingHeroAsset.png'
 import mesakaiLogo from '../assets/logos/Mesakai full logo white.svg'
 import gradientArc from '../assets/gradient-arc.svg'
 import gradientCircle from '../assets/gradient-circle.svg'
 
 function Page1() {
-  const circleRef = useRef<HTMLImageElement>(null)
-  const [circleWidth, setCircleWidth] = useState(0)
-  const [breakpoint, setBreakpoint] = useState('')
-  const [viewportHeight, setViewportHeight] = useState(0)
-
-  useEffect(() => {
-    const updateWidth = () => {
-      if (circleRef.current) {
-        setCircleWidth(circleRef.current.offsetWidth)
-      }
-    }
-
-    const updateBreakpoint = () => {
-      const width = window.innerWidth
-      if (width >= 1536) setBreakpoint('2xl')
-      else if (width >= 1280) setBreakpoint('xl')
-      else if (width >= 1024) setBreakpoint('lg')
-      else if (width >= 768) setBreakpoint('md')
-      else if (width >= 640) setBreakpoint('sm')
-      else setBreakpoint('xs')
-    }
-
-    const updateViewportHeight = () => {
-      setViewportHeight(window.innerHeight)
-    }
-
-    const updateAll = () => {
-      updateWidth()
-      updateBreakpoint()
-      updateViewportHeight()
-    }
-
-    updateAll()
-
-    const resizeObserver = new ResizeObserver(updateWidth)
-    if (circleRef.current) {
-      resizeObserver.observe(circleRef.current)
-    }
-
-    window.addEventListener('resize', updateAll)
-
-    return () => {
-      resizeObserver.disconnect()
-      window.removeEventListener('resize', updateAll)
-    }
-  }, [])
 
   const scrollToPage2 = () => {
     const page2 = document.getElementById('page2')
@@ -89,7 +42,6 @@ function Page1() {
 
       {/* Gradient Circle - bottom left, only top right quarter visible */}
       <img
-        ref={circleRef}
         src={gradientCircle}
         alt=""
         className="absolute bottom-0 left-30"

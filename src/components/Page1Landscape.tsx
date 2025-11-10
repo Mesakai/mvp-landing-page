@@ -7,7 +7,6 @@ import gradientCircle from '../assets/gradient-circle.svg'
 function Page1Landscape() {
   const circleRef = useRef<HTMLImageElement>(null)
   const [circleWidth, setCircleWidth] = useState(0)
-  const [breakpoint, setBreakpoint] = useState('')
   const [viewportHeight, setViewportHeight] = useState(0)
 
   useEffect(() => {
@@ -17,23 +16,12 @@ function Page1Landscape() {
       }
     }
 
-    const updateBreakpoint = () => {
-      const width = window.innerWidth
-      if (width >= 1536) setBreakpoint('2xl')
-      else if (width >= 1280) setBreakpoint('xl')
-      else if (width >= 1024) setBreakpoint('lg')
-      else if (width >= 768) setBreakpoint('md')
-      else if (width >= 640) setBreakpoint('sm')
-      else setBreakpoint('xs')
-    }
-
     const updateViewportHeight = () => {
       setViewportHeight(window.innerHeight)
     }
 
     const updateAll = () => {
       updateWidth()
-      updateBreakpoint()
       updateViewportHeight()
     }
 
