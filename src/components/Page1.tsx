@@ -17,7 +17,7 @@ function Page1() {
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
         height: '100dvh',
-        maxWidth: '2000px',
+        maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
@@ -48,7 +48,7 @@ function Page1() {
         style={{
           width: '120vw',
           minWidth: '800px',
-          maxWidth: '2000px',
+          maxWidth: '2600px',
           height: 'auto',
           transform: 'translate(-50%, 50%) rotate(135deg)',
         }}

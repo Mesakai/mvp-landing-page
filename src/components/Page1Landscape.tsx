@@ -52,7 +52,7 @@ function Page1Landscape() {
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
         height: '100dvh',
-        maxWidth: '2000px',
+        maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
