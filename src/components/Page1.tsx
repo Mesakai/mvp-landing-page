@@ -16,7 +16,7 @@ function Page1() {
     <section
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
-        height: '100vh',
+        height: '100svh',
         maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
@@ -29,7 +29,7 @@ function Page1() {
         src={gradientArc}
         alt=""
         className="absolute top-0 left-0 w-full"
-        style={{ height: '30vh' }}
+        style={{ height: '30svh' }}
       />
 
       {/* Mesakai Logo - positioned at top within arc */}
@@ -55,7 +55,7 @@ function Page1() {
       />
 
       {/* Text Content - positioned in bottom half */}
-      <div className="text-white p-[10vw] w-full flex justify-end items-start flex-col z-10 relative" style={{ height: '100vh' }}>
+      <div className="text-white p-[10vw] w-full flex justify-end items-start flex-col z-10 relative" style={{ height: '100svh' }}>
         <h1 className='font-bold text-4xl mb-5 w-80'>For the love of good food and great company</h1>
         <p className='text-lg w-80 mb-5'>
           At Mesakai, we belive food and people Lorem ipsum dolor sit amet, consectetuer

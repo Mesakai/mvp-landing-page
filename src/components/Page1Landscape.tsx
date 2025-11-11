@@ -51,7 +51,7 @@ function Page1Landscape() {
     <section
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
-        height: '100vh',
+        height: '100svh',
         maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
@@ -64,7 +64,7 @@ function Page1Landscape() {
         src={gradientArc}
         alt=""
         className="absolute top-0 left-0 w-full z-10"
-        style={{ height: '25vh' }}
+        style={{ height: '25svh' }}
       />
 
       {/* Mesakai Logo - positioned at top within arc */}
@@ -89,7 +89,7 @@ function Page1Landscape() {
       />
 
       {/* Text Content - bottom left quarter */}
-      <div className="text-white w-full flex items-end justify-start z-5 relative" style={{ height: '100vh' }}>
+      <div className="text-white w-full flex items-end justify-start z-5 relative" style={{ height: '100svh' }}>
         <div style={{
           maxWidth: viewportHeight < 450 ? (circleWidth ? `${circleWidth * 0.65}px` : '65vw') : (circleWidth ? `${circleWidth * 0.55}px` : '55vw'),
           paddingLeft: 'clamp(2rem, 4vw, 5rem)',
