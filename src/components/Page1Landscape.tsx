@@ -8,6 +8,7 @@ function Page1Landscape() {
   const circleRef = useRef<HTMLImageElement>(null)
   const [circleWidth, setCircleWidth] = useState(0)
   const [viewportHeight, setViewportHeight] = useState(0)
+  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
 
   useEffect(() => {
     const updateWidth = () => {
@@ -20,9 +21,14 @@ function Page1Landscape() {
       setViewportHeight(window.innerHeight)
     }
 
+    const updateOrientation = () => {
+      setIsLandscape(window.innerWidth > window.innerHeight)
+    }
+
     const updateAll = () => {
       updateWidth()
       updateViewportHeight()
+      updateOrientation()
     }
 
     updateAll()
@@ -51,7 +57,7 @@ function Page1Landscape() {
     <section
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
-        height: '100dvh',
+        height: isLandscape ? '100vh' : '100svh',
         maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
@@ -64,7 +70,7 @@ function Page1Landscape() {
         src={gradientArc}
         alt=""
         className="absolute top-0 left-0 w-full z-10"
-        style={{ height: '25dvh' }}
+        style={{ height: isLandscape ? '25vh' : '25svh' }}
       />
 
       {/* Mesakai Logo - positioned at top within arc */}
@@ -89,9 +95,9 @@ function Page1Landscape() {
       />
 
       {/* Text Content - bottom left quarter */}
-      <div className="text-white w-full flex items-end justify-start z-5 relative" style={{ height: '100dvh' }}>
+      <div className="text-white w-full flex items-end justify-start z-5 relative" style={{ height: isLandscape ? '100vh' : '100svh' }}>
         <div style={{
-          maxWidth: circleWidth ? `${circleWidth * 0.55}px` : '55vw',
+          maxWidth: viewportHeight < 450 ? (circleWidth ? `${circleWidth * 0.65}px` : '65vw') : (circleWidth ? `${circleWidth * 0.55}px` : '55vw'),
           paddingLeft: 'clamp(2rem, 4vw, 5rem)',
           paddingBottom: viewportHeight < 480 ? 'clamp(1rem, 3vh, 3rem)' : 'clamp(2rem, 6vh, 8rem)',
           boxSizing: 'border-box'
@@ -122,6 +128,24 @@ function Page1Landscape() {
             Join the waitlist
           </button>
         </div>
+      </div>
+
+      {/* Development viewport dimensions display */}
+      <div style={{
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        color: 'white',
+        padding: '1rem 2rem',
+        borderRadius: '8px',
+        fontSize: '1.5rem',
+        fontWeight: 'bold',
+        zIndex: 9999,
+        pointerEvents: 'none'
+      }}>
+        {window.innerWidth}w × {viewportHeight}h
       </div>
     </section>
   )
