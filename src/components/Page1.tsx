@@ -1,28 +1,9 @@
-import { useEffect, useState } from 'react'
 import landingHeroAsset from '../assets/LandingHeroAsset.png'
 import mesakaiLogo from '../assets/logos/Mesakai full logo white.svg'
 import gradientArc from '../assets/gradient-arc.svg'
 import gradientCircle from '../assets/gradient-circle.svg'
 
 function Page1() {
-  const [isLandscape, setIsLandscape] = useState(window.innerWidth > window.innerHeight)
-  const [viewportDimensions, setViewportDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
-  })
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsLandscape(window.innerWidth > window.innerHeight)
-      setViewportDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight
-      })
-    }
-
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
 
   const scrollToPage2 = () => {
     const page2 = document.getElementById('page2')
@@ -35,7 +16,7 @@ function Page1() {
     <section
       className="flex items-center justify-center relative overflow-hidden mx-auto"
       style={{
-        height: isLandscape ? '100vh' : '100svh',
+        height: '100vh',
         maxWidth: '2600px',
         backgroundImage: `url(${landingHeroAsset})`,
         backgroundSize: 'cover',
@@ -48,7 +29,7 @@ function Page1() {
         src={gradientArc}
         alt=""
         className="absolute top-0 left-0 w-full"
-        style={{ height: isLandscape ? '30vh' : '30svh' }}
+        style={{ height: '30vh' }}
       />
 
       {/* Mesakai Logo - positioned at top within arc */}
@@ -74,30 +55,12 @@ function Page1() {
       />
 
       {/* Text Content - positioned in bottom half */}
-      <div className="text-white p-[10vw] w-full flex justify-end items-start flex-col z-10 relative" style={{ height: isLandscape ? '100vh' : '100svh' }}>
+      <div className="text-white p-[10vw] w-full flex justify-end items-start flex-col z-10 relative" style={{ height: '100vh' }}>
         <h1 className='font-bold text-4xl mb-5 w-80'>For the love of good food and great company</h1>
         <p className='text-lg w-80 mb-5'>
           At Mesakai, we belive food and people Lorem ipsum dolor sit amet, consectetuer
           adipiscing elit, sed diam.</p>
           <button onClick={scrollToPage2} className='border-2 p-1 px-5 rounded-md hover:bg-white hover:text-[#585651] transition-colors'>Join the waitlist</button>
-      </div>
-
-      {/* Development viewport dimensions display */}
-      <div style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        color: 'white',
-        padding: '1rem 2rem',
-        borderRadius: '8px',
-        fontSize: '1.5rem',
-        fontWeight: 'bold',
-        zIndex: 9999,
-        pointerEvents: 'none'
-      }}>
-        {viewportDimensions.width}w × {viewportDimensions.height}h
       </div>
     </section>
   )
