@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import landingHeroAsset from '../assets/LandingHeroAsset.png'
+import landingHeroAsset from '../assets/LandingHeroBackground.webp'
 import mesakaiLogo from '../assets/logos/Mesakai full logo white.svg'
 import gradientArc from '../assets/gradient-arc.svg'
 import gradientCircle from '../assets/gradient-circle.svg'
@@ -108,8 +108,8 @@ function Page1Landscape() {
             lineHeight: '1.6',
             marginBottom: viewportHeight < 480 ? '0.75rem' : '1.25rem'
           }}>
-            At Mesakai, we belive food and people Lorem ipsum dolor sit amet, consectetuer
-            adipiscing elit, sed diam.
+            At Mesakai, we believe the best stories start around a table.<br />
+            Stop scrolling. Start eating.
           </p>
           <button
             onClick={scrollToPage2}

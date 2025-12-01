@@ -1,4 +1,4 @@
-import landingHeroAsset from '../assets/LandingHeroAsset.png'
+import landingHeroAsset from '../assets/LandingHeroBackground.webp'
 import mesakaiLogo from '../assets/logos/Mesakai full logo white.svg'
 import gradientArc from '../assets/gradient-arc.svg'
 import gradientCircle from '../assets/gradient-circle.svg'
@@ -58,8 +58,8 @@ function Page1() {
       <div className="text-white p-[10vw] w-full flex justify-end items-start flex-col z-10 relative" style={{ height: '100svh' }}>
         <h1 className='font-bold text-4xl mb-5 w-80'>For the love of good food and great company</h1>
         <p className='text-lg w-80 mb-5'>
-          At Mesakai, we belive food and people Lorem ipsum dolor sit amet, consectetuer
-          adipiscing elit, sed diam.</p>
+          At Mesakai, we believe the best stories start around a table.<br />
+          Stop scrolling. Start eating.</p>
           <button onClick={scrollToPage2} className='border-2 p-1 px-5 rounded-md hover:bg-white hover:text-[#585651] transition-colors'>Join the waitlist</button>
       </div>
     </section>
