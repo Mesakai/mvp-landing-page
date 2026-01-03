@@ -59,7 +59,7 @@ function Page1() {
         <h1 className='font-bold text-4xl mb-5 w-80'>Food discovery, made personal.</h1>
         <p className='text-lg w-80 mb-5'>
           Discover places you’ll love, based on your taste and the people you trust.<br />
-          At Mesakai, we believe the best stories start around a Table.</p>
+        </p>
           <button onClick={scrollToPage2} className='border-2 p-1 px-5 rounded-md hover:bg-white hover:text-[#585651] transition-colors'>Join the waitlist</button>
       </div>
     </section>

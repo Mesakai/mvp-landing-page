@@ -109,7 +109,6 @@ function Page1Landscape() {
             marginBottom: viewportHeight < 480 ? '0.75rem' : '1.25rem'
           }}>
             Discover places you’ll love, based on your taste and the people you trust.<br />
-            At Mesakai, we believe the best stories start around a Table.
           </p>
           <button
             onClick={scrollToPage2}
