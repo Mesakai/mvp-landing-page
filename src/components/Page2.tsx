@@ -35,7 +35,7 @@ function Page2() {
           <img src={mesakaiLogo} alt="Mesakai" className="w-40" />
         </div>
         <h2 className="text-3xl font-bold mb-2 text-center text-white">Join the Waitlist</h2>
-        <p className="text-white mb-6 text-center opacity-80">Be the first to know when we launch</p>
+        <p className="text-white mb-6 text-center opacity-80">Get early access to food discovery made personal</p>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>

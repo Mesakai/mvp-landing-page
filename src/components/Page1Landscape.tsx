@@ -101,15 +101,15 @@ function Page1Landscape() {
             lineHeight: '1.2',
             marginBottom: viewportHeight < 480 ? '0.75rem' : '1.25rem'
           }}>
-            For the love of good food and great company
+            Food discovery, made personal.
           </h1>
           <p style={{
             fontSize: circleWidth ? `clamp(${viewportHeight < 480 ? '0.875rem' : '1rem'}, ${circleWidth * (viewportHeight < 480 ? 0.015 : 0.018)}px, ${viewportHeight < 480 ? '1.5rem' : '2rem'})` : 'clamp(1rem, min(1.8vw, 3.6vh), 2rem)',
             lineHeight: '1.6',
             marginBottom: viewportHeight < 480 ? '0.75rem' : '1.25rem'
           }}>
-            At Mesakai, we believe the best stories start around a table.<br />
-            Stop scrolling. Start eating.
+            Discover places you’ll love, based on your taste and the people you trust.<br />
+            At Mesakai, we believe the best stories start around a Table.
           </p>
           <button
             onClick={scrollToPage2}

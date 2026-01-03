@@ -34,7 +34,7 @@ function Page2Landscape() {
         <div className="flex justify-center mb-3">
           <img src={mesakaiLogo} alt="Mesakai" className="w-24 md:w-32" />
         </div>
-        <p className="text-white mb-3 text-center opacity-80 text-xs md:text-sm">Be the first to know when we launch</p>
+        <p className="text-white mb-3 text-center opacity-80 text-xs md:text-sm">Get early access to food discovery made personal</p>
 
         <form onSubmit={handleSubmit} className="space-y-3">
           <div className="grid grid-cols-2 gap-3">
